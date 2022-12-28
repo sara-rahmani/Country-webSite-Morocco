@@ -1,0 +1,436 @@
+@charset "utf-8";
+
+/* Google Fonts 
+
+font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;
+
+*/
+
+/* Resets */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+    text-align: center;
+}
+
+p {
+    line-height: 1.4;
+  
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+ 
+
+
+h1, h2, h3, nav a {
+ 
+    font-weight: 400;
+}
+
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+}
+
+header {
+    grid-area:header;
+    background-color:  whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 0;
+    padding-left: 8px;
+    font-size: 4em;
+}
+
+header a {
+    text-decoration: none;
+    color: firebrick;
+}
+
+
+
+.hamburger {
+    font-size: 5em;
+    position: relative;
+    top: -3px;
+    padding-right: 8px;
+ 
+}
+
+.hamburger:before {
+    content:'\2630';
+}
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 103px;
+    z-index: 1;
+    background-color: whitesmoke;
+}
+
+nav.show {
+    display: block;  
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-top:2px solid firebrick;
+}
+nav li{
+    text-align: center;
+    border-bottom:2px solid firebrick;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav  a {
+    font-size: 1.5em;
+    padding: 10px;
+    line-height: 40px;
+    display: block;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    background-color: firebrick;
+    color: whitesmoke;
+    width: 100%;
+   
+}
+
+video{
+    
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    
+}
+
+main{
+    flex:1;
+}
+.banner-col-01{
+   
+   position: relative;
+  
+  
+}
+.banner-col-02{
+   margin-left: 120px;
+   margin-right: 120px;
+    bottom: 50px;
+    position: absolute;
+   
+}
+.banner-col-02 ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+.banner-col-02 li{
+     border-radius: 20px;
+     padding: 10px;
+     background-color: firebrick;
+     display: inline-block;
+     text-decoration: none;
+
+    
+}
+.text a,
+.banner-col-02 a{
+    font-size: 1.5em;
+    padding-left: 10px;
+    line-height: 40px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.section-col-01,
+.food,
+.section-col-02,
+.section-col-03{
+    margin: 50px;
+    border-radius:20px ;
+    border:3px firebrick double;
+    margin-bottom: 10px;
+padding:10px;
+}
+
+
+h1{
+    font-size: 2.5em;
+    font-style: italic;
+    text-align: center; 
+    
+
+}
+section img{
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 20px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: firebrick; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 20px; /* Increase font size */
+  }
+  
+    #myBtn:hover {
+    background-color: whitesmoke; /* Add a dark-grey background on hover */
+    color: firebrick;  
+}
+/*slides*/
+
+
+
+.mySlides {display: none;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  background-color: firebrick;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  margin:10px 0;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: whitesmoke;
+  font-size: 2em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  right:0;
+  z-index: 1;
+  
+}
+
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.images {
+	display: block;
+
+}
+.image {
+	width: 90%;
+	height: 90%;
+	
+}
+.food{
+    margin: 20px 0 40px 0;
+}
+/*Footer Style*/
+
+footer {
+    background-color: firebrick;
+    padding: 0 16px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.return {
+    padding-top: 15px;
+}
+
+.copyright {
+    margin: 20px;
+}
+
+.credits-page {
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+
+.credits-page a:hover,
+.credits-page a:active,
+.credits-page a:focus {
+    text-decoration: underline;
+    color: white;
+}
+
+
+main .credits-text {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.credits-text a {
+    text-decoration: none;
+    color: black;
+}
+/* Tablet breakpoint */
+@media (min-width: 760px){
+    .hamburger {
+        display: none;
+    }
+    nav {
+        display:block;
+        position: static;
+        width: auto;
+    }
+    nav ul {
+        display: flex;
+        border-top:0 ;
+        
+    }
+    nav li{
+        border-bottom:0 ;
+        border-right:2px solid firebrick;
+        border-left:2px solid firebrick;
+    }
+
+
+    
+.banner-col-02{
+       position: absolute;
+      bottom:50px;
+          }
+.banner-col-02 li{
+    margin:5px;
+    width: 220px;
+    text-align: center;
+    display: block;
+
+}
+section img{
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+
+}
+.images {
+	display: flex;
+	justify-content: space-between;}
+  
+.image{
+    margin: 10px;
+}
+
+
+.image:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .food{
+    display: flex;
+}
+
+.food-01,
+.food-03,
+.food-02{
+    display: block;
+    width: 100%;
+}
+
+
+
+.food-01 p,
+.food-03 p,
+.food p {
+    margin: 10px 0 0 30px;
+    line-height: 1.3em;
+}
+.food img {
+    width: 60%;
+    height: auto;
+    margin: 20px 0 0 30px;
+}
+
+
+
+
+}
